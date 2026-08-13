@@ -159,9 +159,6 @@ body {
     border-bottom: 1px solid #26362b;
 }
 
-
-/* grid effect */
-
 .activities-hero::before {
     content: "";
 
@@ -183,9 +180,6 @@ body {
 
     pointer-events: none;
 }
-
-
-/* glowing circle */
 
 .activities-hero::after {
     content: "";
@@ -484,6 +478,143 @@ body {
 
 
 /* =========================================
+   PREMIUM COMMUNITY ENGAGEMENT
+   ========================================= */
+
+.featured-activity {
+    position: relative;
+
+    border-color: rgba(214, 178, 79, 0.30);
+}
+
+.featured-activity .activity-image {
+    height: 390px;
+}
+
+.featured-activity .activity-image img {
+    filter: brightness(0.72) contrast(1.05);
+}
+
+.featured-activity:hover .activity-image img {
+    transform: scale(1.08);
+
+    filter: brightness(0.88) contrast(1.05);
+}
+
+
+/* IMAGE OVERLAY */
+
+.image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(3, 8, 5, 0.95) 0%,
+            rgba(3, 8, 5, 0.35) 45%,
+            rgba(3, 8, 5, 0.05) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* COMMUNITY TAG */
+
+.featured-activity .activity-tag {
+    z-index: 5;
+
+    left: 22px;
+    top: 22px;
+    bottom: auto;
+
+    background: #d6b24f;
+
+    color: #07100b;
+
+    padding: 8px 13px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* IMAGE LABEL */
+
+.image-label {
+    position: absolute;
+
+    z-index: 5;
+
+    left: 25px;
+    bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.image-label span {
+    color: #d6b24f;
+
+    font-size: 9px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.image-label strong {
+    margin-top: 5px;
+
+    color: #ffffff;
+
+    font-size: 32px;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+
+/* COMMUNITY CONTENT */
+
+.featured-activity .activity-content {
+    padding: 30px 30px 34px;
+}
+
+.featured-activity .activity-content h3 {
+    font-size: 28px;
+}
+
+.activity-line {
+    width: 55px;
+    height: 2px;
+
+    margin-top: 22px;
+
+    background: #d6b24f;
+}
+
+.activity-footer {
+    display: block;
+
+    margin-top: 14px;
+
+    color: #59675e;
+
+    font-size: 8px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
    CLOSING SECTION
    ========================================= */
 
@@ -643,6 +774,25 @@ footer p {
         align-items: flex-start;
 
         gap: 10px;
+    }
+
+
+    /* MOBILE COMMUNITY CARD */
+
+    .featured-activity .activity-image {
+        height: 300px;
+    }
+
+    .image-label strong {
+        font-size: 24px;
+    }
+
+    .featured-activity .activity-content {
+        padding: 25px 22px 30px;
+    }
+
+    .featured-activity .activity-content h3 {
+        font-size: 23px;
     }
 
 }
